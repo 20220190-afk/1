@@ -130,10 +130,10 @@
 
 const imgElement = document.getElementById("warningImage");
 
-if (finaltempRise < 0.5) { imgElement.src = "file:///C:/Users/otaroharada0829/Downloads/Designer%20(2).png"} 
-else if (finaltempRise < 1.0) { imgElement.src = "file:///C:/Users/otaroharada0829/Downloads/Gemini_Generated_Image_4z6iru4z6iru4z6i.png"; } 
-else if (finaltempRise < 1.5){ imgElement.src = "file:///C:/Users/otaroharada0829/Downloads/Gemini_Generated_Image_n15xaln15xaln15x.png"; }
-else { imgElement.src = "file:///C:/Users/otaroharada0829/Downloads/Gemini_Generated_Image_2ousa82ousa82ous.png"; }
+if (finaltempRise < 0.5) { imgElement.src = "temp-safe.png"} 
+else if (finaltempRise < 1.0) { imgElement.src = "temp-warning1.png"; } 
+else if (finaltempRise < 1.5){ imgElement.src = "temp-warning2.png"; }
+else { imgElement.src = "temp-danger.png"; }
 
 chart.data.datasets[0].data = Array.from({length: 100}, (_, i) => {
     return (hourlyTempRise * hours * (i + 1));	
